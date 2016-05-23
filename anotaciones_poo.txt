@@ -1,0 +1,38 @@
+POO
+Pilares de la Programacion Orientada a Objetos
+Encapsulacion: 
+	Proteger los atributos internos de una clase para evitar modificaciones involuntarias.
+	Para ello se hace uso de modificadores de acceso los cuales se definen a continuacion:
+	*private: Solo son visibles dentro de la clase y los metodos de la clase.
+	*public: Son visibles desde cualquier lugar
+	*protected: --Herencia
+	*default: Es similar a public con la diferencia de que no es visible desde otros paquetes.
+
+	Tecnicamente se encapsula un atributo definiendolo con el modificador de acceso private y acceder o asignar valores mediante metodos publicos mas conocidos como sets y gets.
+
+Abstraccion
+Herencia
+Polimorfismo
+
+
+Es posible inicializar los atributos internos de una clase haciendo uso de un constructor el cual tiene las siguientes caracteristicas:
+	*Es un metodo
+	*Tiene el mismo nombre de la clase
+	*Puede recibir parametros
+	*Obligatoriamente es public 
+	*Es el primer metodo en ejecutarse al instanciar un objeto.
+	*No tiene tipo de dato de retorno, inclusive void
+	*Puede sobrecargarse.
+	*Si no se define un constructor, Java crea un constructor vacio por defecto.
+
+
+
+
+
+
+
+
+
+
+
+
