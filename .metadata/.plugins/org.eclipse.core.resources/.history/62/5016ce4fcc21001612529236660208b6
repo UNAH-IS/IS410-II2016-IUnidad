@@ -1,0 +1,21 @@
+package implementacion;
+
+import clases.Producto;
+
+public class Principal {
+	//Declaracion de variables globales en la clase
+	public static void main(String[] args) {
+		//Declaracion de variables locales
+		Producto p = new Producto(10,"Desodorante OldSpice", "OldSpice",150,15); //Objeto o instancia p, Instanciacion
+		Producto p2 = new Producto("Zapatos adidas");
+
+		//p.setNombreProducto("Desodorante OldSpice");
+		System.out.println(p.getMarca());
+		System.out.println(p.getNombreProducto());
+		System.out.println(p.getPrecio());
+
+		System.out.println(p2.getNombreProducto());
+
+	}
+
+}
