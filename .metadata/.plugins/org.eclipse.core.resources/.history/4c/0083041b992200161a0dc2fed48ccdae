@@ -1,0 +1,12 @@
+package implementacion;
+
+public class Principal {
+	//Definicion de atributos
+	private ArrayList productos;
+	public Principal(){
+
+	}
+	public static void main(String[] args) {
+		new Principal();
+	}
+}

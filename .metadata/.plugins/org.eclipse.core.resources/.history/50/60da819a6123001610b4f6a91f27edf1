@@ -1,0 +1,14 @@
+package implementacion;
+
+public class Principal {
+	public Principal(){
+
+	}
+
+	public void menu(){
+
+	}
+	public static void main(String[] args) {
+		new Principal();
+	}
+}

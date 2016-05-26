@@ -1,0 +1,20 @@
+package implementacion;
+//Shift+Ctrl+O
+import java.util.ArrayList;
+
+import clases.Producto;
+
+public class Principal {
+	//Definicion de atributos
+	private ArrayList<Producto> productos;
+	//<> RawType, en el caso de ArrayList
+	//indica el tipo de dato que va a almacenar
+
+	public Principal(){
+		productos = new ArrayList<Producto>();
+		Producto p = new Producto("Computadora");
+	}
+	public static void main(String[] args) {
+		new Principal();
+	}
+}

@@ -1,0 +1,25 @@
+package implementacion;
+
+import javax.swing.JOptionPane;
+
+public class Principal {
+	private int opcion;
+	public Principal(){
+
+	}
+
+	public void menu(){
+
+		do{
+			JOptionPane.showMessageDialog(null,
+					"0 Salir\n"
+					+ "1 Agregar producto\n"
+					+ "2 Modificar producto\n"
+					+ "3 Eliminar producto\n"
+					+ "4 Mostrar informacion");
+		}while(opcion!=0);
+	}
+	public static void main(String[] args) {
+		new Principal();
+	}
+}

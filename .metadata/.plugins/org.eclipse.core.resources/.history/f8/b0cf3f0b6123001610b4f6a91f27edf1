@@ -1,0 +1,16 @@
+package implementacion;
+
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+
+public class Principal {
+	public Principal(){
+		Alert mensaje = new Alert(AlertType.INFORMATION);
+		mensaje.setTitle("Titulo");
+		mensaje.setContentText("Hola Mundo");
+		mensaje.show();
+	}
+	public static void main(String[] args) {
+		new Principal();
+	}
+}

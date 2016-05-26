@@ -1,0 +1,14 @@
+package clases;
+
+public class Arreglos {
+	//Variables globales para la clase
+	private int[] enteros;
+	public Arreglos(){
+		//Logica del programa
+
+	}
+
+	public static void main(String[] args) {
+		new Arreglos(); //Instancia anonima
+	}
+}
