@@ -50,7 +50,11 @@ public class Principal {
 		//Crear una instancia de producto
 		Producto p = new Producto();
 		//Solicitar la informacion al usuario
-		p.solicitarInformacion();
+		p.setCodigoProducto(Integer.valueOf(JOptionPane.showInputDialog("Ingrese el codigo del producto")));
+		p.setNombreProducto(JOptionPane.showInputDialog("Ingrese el nombre del producto"));
+		p.setMarca(JOptionPane.showInputDialog("Ingrese la marca del producto"));
+		p.setImpuesto(Float.valueOf(JOptionPane.showInputDialog("Ingrese el impuesto del producto")));
+		p.setPrecio(Float.valueOf(JOptionPane.showInputDialog("Ingrese el precio del producto")));
 		//Agregar la instancia al ArrayList
 		productos.add(p);
 		//Mostrar la informacion agregada
@@ -59,31 +63,15 @@ public class Principal {
 
 	public void actualizarRegistro(){
 		//Solicitar registro que desea actualizar
-		int indice = Integer.valueOf(JOptionPane.showInputDialog("Que indice desea actualizar (0 al "+(productos.size()-1)+ ")"));
+		int indice = Integer.valueOf(JOptionPane.showInputDialog("Que indice desea actualizar (0 al "+(productos.size()-1)));
 		//Obtener el objeto a modificar
-		Producto p = productos.get(indice);
 		//Solicitar nuevamente la informacion
-		p.solicitarInformacion();
 		//Actualizar o sustituir el objeto en el ArrayList
-		productos.set(indice, p);
 		//Mostrar informacion
-		mostrarInformacion();
 	}
 
 	public void eliminarRegistro(){
-		//Solicitar el indice que desea eliminar
-		int indice = Integer.valueOf(JOptionPane.showInputDialog("Que indice desea eliminar (0 al "+(productos.size()-1)+ ")"));
-		//Consultar si desea eliminar el registro
-		int resultado = JOptionPane.showConfirmDialog(null, "¿Desea eliminar el producto " + productos.get(indice).getNombreProducto() + "?");
-		System.out.println(resultado);
-		//Opcion Si: 0
-		//Opcion No: 1
-		//Opcion Cancelar: 2
-		//Eliminar el objeto del arrayList
-		if (resultado == 0)
-			productos.remove(indice);
-		//Mostrar informacion
-		mostrarInformacion();
+
 	}
 
 	public void mostrarInformacion(){

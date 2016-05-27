@@ -1,0 +1,51 @@
+package implementacion;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+import clases.Producto;
+
+public class Principal {
+	private int opcion;
+	private ArrayList<Producto> productos;
+
+	public Principal(){
+		productos = new ArrayList<Producto>();
+		menu();
+	}
+
+	public void menu(){
+
+		do{
+			opcion = Integer.valueOf(JOptionPane.showInputDialog(null,
+					"0 Salir\n"
+					+ "1 Agregar producto\n"
+					+ "2 Modificar producto\n"
+					+ "3 Eliminar producto\n"
+					+ "4 Mostrar informacion"));
+			switch(opcion){
+				case 0:
+					JOptionPane.showMessageDialog(null, "Adios");
+					break;
+				case 1:
+					agregarRegistro();
+					break;
+				case 2:
+					actualizarRegistro();
+					break;
+				case 3:
+					eliminarRegistro();
+					break;
+				case 4:
+					mostrarInformacion();
+					break;
+				default:
+					JOptionPane.showMessageDialog(null, "Opcion Invalida");
+			}
+		}while(opcion!=0);
+	}
+	public static void main(String[] args) {
+		new Principal();
+	}
+}

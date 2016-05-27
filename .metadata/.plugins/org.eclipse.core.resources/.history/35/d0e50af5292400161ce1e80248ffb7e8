@@ -71,19 +71,7 @@ public class Principal {
 	}
 
 	public void eliminarRegistro(){
-		//Solicitar el indice que desea eliminar
-		int indice = Integer.valueOf(JOptionPane.showInputDialog("Que indice desea eliminar (0 al "+(productos.size()-1)+ ")"));
-		//Consultar si desea eliminar el registro
-		int resultado = JOptionPane.showConfirmDialog(null, "¿Desea eliminar el producto " + productos.get(indice).getNombreProducto() + "?");
-		System.out.println(resultado);
-		//Opcion Si: 0
-		//Opcion No: 1
-		//Opcion Cancelar: 2
-		//Eliminar el objeto del arrayList
-		if (resultado == 0)
-			productos.remove(indice);
-		//Mostrar informacion
-		mostrarInformacion();
+
 	}
 
 	public void mostrarInformacion(){

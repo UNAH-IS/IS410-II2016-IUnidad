@@ -1,7 +1,5 @@
 package clases;
 
-import javax.swing.JOptionPane;
-
 //Plain Old Java Object/Java Bean:
 //Atributos privados
 //Metodos sets  y gets
@@ -86,14 +84,6 @@ public class Producto {
 	public String toString() {
 		return "Producto [codigoProducto=" + codigoProducto + ", nombreProducto=" + nombreProducto + ", marca=" + marca
 				+ ", precio=" + precio + ", impuesto=" + impuesto + "]";
-	}
-
-	public void solicitarInformacion(){
-		codigoProducto = Integer.valueOf(JOptionPane.showInputDialog("Ingrese el codigo del producto",codigoProducto));
-		nombreProducto = JOptionPane.showInputDialog("Ingrese el nombre del producto",nombreProducto);
-		marca = JOptionPane.showInputDialog("Ingrese la marca del producto",marca);
-		impuesto = Float.valueOf(JOptionPane.showInputDialog("Ingrese el impuesto del producto",impuesto));
-		precio = Float.valueOf(JOptionPane.showInputDialog("Ingrese el precio del producto",precio));
 	}
 
 	//El metodo toString usualmente se utiliza para mostrar un objeto como Texto
