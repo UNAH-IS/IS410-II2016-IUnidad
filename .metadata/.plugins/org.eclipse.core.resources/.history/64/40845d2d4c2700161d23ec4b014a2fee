@@ -1,0 +1,10 @@
+package clases;
+
+public class Carrera {
+	private String codigoCarrera;
+	private String nombreCarrera;
+	private int cantidadClases;
+
+
+
+}

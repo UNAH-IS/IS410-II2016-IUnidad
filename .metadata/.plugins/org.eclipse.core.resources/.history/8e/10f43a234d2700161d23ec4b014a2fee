@@ -1,0 +1,13 @@
+package implementacion;
+
+import clases.Alumno;
+
+public class Principal {
+	public Principal(){
+		Alumno a = new Alumno("200610011111");
+	}
+	public static void main(String[] args) {
+		new Principal();
+	}
+
+}

@@ -11,21 +11,17 @@ import javax.swing.JOptionPane;
 public class Producto {
 	private int codigoProducto;
 	private String nombreProducto;
-	private String marca;
+	private Modelo modelo; //Composicion
 	private float precio;
 	private float impuesto;
 	public static int valor_estatico;
 
-	public Producto(
-			int codigoProducto,
+	public Producto(int codigoProducto,
 			String nombreProducto,
-			String marca,
-			float precio,
-			float impuesto
-	) {
+			Modelo modelo, float precio, float impuesto) {
 		this.codigoProducto = codigoProducto;
 		this.nombreProducto = nombreProducto;
-		this.marca = marca;
+		this.modelo = modelo;
 		this.precio = precio;
 		this.impuesto = impuesto;
 	}
@@ -34,64 +30,71 @@ public class Producto {
 		this.nombreProducto = nombreProducto;
 	}
 
-	public Producto(){}
+	public Producto(){
+		modelo = new Modelo();
+	}
+
+
 
 	public int getCodigoProducto() {
 		return codigoProducto;
 	}
+
 	public void setCodigoProducto(int codigoProducto) {
 		this.codigoProducto = codigoProducto;
 	}
+
 	public String getNombreProducto() {
 		return nombreProducto;
 	}
+
 	public void setNombreProducto(String nombreProducto) {
 		this.nombreProducto = nombreProducto;
 	}
-	public String getMarca() {
-		return marca;
+
+	public Modelo getModelo() {
+		return modelo;
 	}
-	public void setMarca(String marca) {
-		this.marca = marca;
+
+	public void setModelo(Modelo modelo) {
+		this.modelo = modelo;
 	}
+
 	public float getPrecio() {
 		return precio;
 	}
+
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
+
 	public float getImpuesto() {
 		return impuesto;
 	}
+
 	public void setImpuesto(float impuesto) {
 		this.impuesto = impuesto;
 	}
 
-	public void mostrarInformacion(){
-		System.out.println(nombreProducto+ "("+marca+")");
+	public static int getValor_estatico() {
+		return valor_estatico;
 	}
 
-	public void mostrarInformacion(String marca){
-		this.marca = marca;
-		mostrarInformacion();
+	public static void setValor_estatico(int valor_estatico) {
+		Producto.valor_estatico = valor_estatico;
 	}
 
-	public void mostrarInformacion(int precio){
-		this.precio = precio;
-		System.out.println("Se cambio el precio a: "+this.precio);
-		mostrarInformacion();
-	}
 
 	@Override
 	public String toString() {
-		return "Producto [codigoProducto=" + codigoProducto + ", nombreProducto=" + nombreProducto + ", marca=" + marca
+		return "Producto [codigoProducto=" + codigoProducto + ", nombreProducto=" + nombreProducto + ", modelo=" + modelo
 				+ ", precio=" + precio + ", impuesto=" + impuesto + "]";
 	}
 
 	public void solicitarInformacion(){
 		codigoProducto = Integer.valueOf(JOptionPane.showInputDialog("Ingrese el codigo del producto",codigoProducto));
 		nombreProducto = JOptionPane.showInputDialog("Ingrese el nombre del producto",nombreProducto);
-		marca = JOptionPane.showInputDialog("Ingrese la marca del producto",marca);
+		modelo.solicitarInformacion();
 		impuesto = Float.valueOf(JOptionPane.showInputDialog("Ingrese el impuesto del producto",impuesto));
 		precio = Float.valueOf(JOptionPane.showInputDialog("Ingrese el precio del producto",precio));
 	}

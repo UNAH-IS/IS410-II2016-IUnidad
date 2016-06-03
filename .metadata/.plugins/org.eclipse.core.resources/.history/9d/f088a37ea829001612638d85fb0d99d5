@@ -1,0 +1,59 @@
+package implementacion;
+
+import java.util.ArrayList;
+
+import clases.Alumno;
+import clases.Carrera;
+import clases.Maestro;
+import clases.Persona;
+
+public class Principal {
+	private ArrayList<Persona> personas;
+
+	public Principal(){
+		personas = new ArrayList<Persona>();
+		Persona p = new Persona("Maria", "Gimenez","F",50,
+				new Carrera("IS", "Ingenieria en Sistemas",54), "Matutino");
+		Persona p1 = new Persona("Pedro", "Gimenez","F",50,
+				new Carrera("IS", "Ingenieria en Sistemas",54), "Matutino");
+		Persona p2 = new Persona("Rodrigo", "Gimenez","F",50,
+				new Carrera("IS", "Ingenieria en Sistemas",54), "Matutino");
+
+		personas.add(p);
+
+		Alumno a = new Alumno(
+				"Juan",
+				"Perez",
+				"M",
+				55,
+				new Carrera("IS", "Ingenieria en Sistemas",54),
+				"Matutino",
+				"200610011111"
+		);
+
+		personas.add(a);
+
+
+		Maestro m = new Maestro("Maria", "Gimenez","F",50,
+				new Carrera("IS", "Ingenieria en Sistemas",54), "Matutino", "2134234",2132.12);
+		personas.add(m);
+
+
+		for (int i = 0; i< personas.size(); i++){
+			System.out.println(personas.get(i).toString());
+		}
+
+		//Apuestas:
+		//En caso de el llamado a toString, cual ejecutara:
+		// El de la clase padre (Persona): 6
+		// El de cada clase correspondiente: 16
+
+
+
+		System.out.println("Fin del programa");
+	}
+	public static void main(String[] args) {
+		new Principal();
+	}
+
+}

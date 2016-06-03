@@ -1,0 +1,18 @@
+package clases;
+
+public class Alumno extends Persona{
+	private String cuenta;
+
+	public Alumno(
+			String nombre,
+			String apellido,
+			String genero,
+			int edad,
+			Carrera carrera,
+			String horario,
+			String cuenta){
+		this.cuenta = cuenta;
+	}
+
+
+}
