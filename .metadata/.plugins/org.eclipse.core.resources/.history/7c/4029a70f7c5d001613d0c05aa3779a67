@@ -1,0 +1,17 @@
+package clases;
+
+public class Telefono {
+	String marca;
+	String color;
+	String modelo;
+	int capacidadMemoriaBytes;
+	int capacidadDiscoBytes;
+	int capacidadProcesadorHertz;
+	int tamanioPantalla;
+	String Resolucion;
+	String sistemaOperativo;
+	String telefonico;
+	String imei;
+
+
+}

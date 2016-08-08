@@ -1,0 +1,26 @@
+package clases;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		int a;
+		//Instanciando el objeto t
+		//Si no se instancia un objeto
+		//no se puede utilizar, mostraria
+		//un error NullPointerException
+
+		Telefono t=new Telefono();
+		t.marca = "Samsung";
+		t.modelo = "S7";
+		t.color = "Dorado";
+		t.capacidadDiscoBytes = 1235245;
+		t.capacidadMemoriaBytes = 436456;
+		t.capacidadProcesadorHertz = 45345;
+
+		System.out.println("Marca del telefono: " + t.marca);
+		t.llamar();
+		t.vibrar();
+		t.colgar();
+	}
+
+}

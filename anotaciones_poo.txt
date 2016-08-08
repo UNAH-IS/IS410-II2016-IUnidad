@@ -11,7 +11,11 @@ Encapsulacion:
 	Tecnicamente se encapsula un atributo definiendolo con el modificador de acceso private y acceder o asignar valores mediante metodos publicos mas conocidos como sets y gets.
 
 	Modificador static: Los atributos y metodos con este modificador pueden ser accedidos a ellos sin crear instancias, se accede de la siguiente forma:
-		NombreClase.atributoEstatico
+		Java: 
+			NombreClase.atributoEstatico
+		PHP:
+			NombreClase::$atributoEstatico;
+			Self::$atributoEstatico; //Dentro de la misma clase
 	Por lo general son publicos, y los valores asignados son globales para cualquier objeto del mismo tipo.
 
 	Composición: Utilizar en un atributo un tipo de dato previamente definido.

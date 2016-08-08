@@ -1,0 +1,25 @@
+package clases;
+
+public class Telefono {
+	public String marca;
+	public String color;
+	public String modelo;
+	public int capacidadMemoriaBytes;
+	public int capacidadDiscoBytes;
+	public int capacidadProcesadorHertz;
+	public int tamanioPantalla;
+	public String Resolucion;
+	public String sistemaOperativo;
+	public String telefonico;
+	public String imei;
+
+	void llamar(){
+		System.out.println("Llamando...");
+	}
+	void colgar(){
+		System.out.println("Colgando...");
+	}
+	void vibrar(){
+		System.out.println("Vibrando...");
+	}
+}
