@@ -1,0 +1,22 @@
+HTML
+HTML, sigla en inglés de HyperText Markup Language (lenguaje de marcas de hipertexto), hace referencia al lenguaje de marcado para la elaboración de páginas web. Es un estándar que sirve de referencia del software que conecta con la elaboración de páginas web en sus diferentes versiones, define una estructura básica y un código (denominado código HTML) para la definición de contenido de una página web, como texto, imágenes, videos, juegos, entre otros.
+
+
+
+
+
+
+
+PHP
+PHP es un lenguaje de programación de uso general de código del lado del servidor originalmente diseñado para el desarrollo web de contenido dinámico. Fue uno de los primeros lenguajes de programación del lado del servidor que se podían incorporar directamente en el documento HTML en lugar de llamar a un archivo externo que procese los datos. El código es interpretado por un servidor web con un módulo de procesador de PHP que genera la página web resultante.
+
+
+
+WindowsApacheMysqlPHP
+	C:\wamp\www\
+LinuxApacheMysqlPhpPerl
+	htdocs
+MacApacheMysqlPhp
+	htdocs
+XosApacheMysqlPhpPerl
+	htdocs

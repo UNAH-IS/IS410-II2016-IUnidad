@@ -1,0 +1,8 @@
+<?php
+	class Prueba{
+		private $campo1;
+		private $campo2;
+		private $campo3;
+
+	}
+?>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>.org.eclipse.dltk.core.external.folders</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.link1</name>
+			<type>2</type>
+			<location>F:/Teach UNAH/Programacion Orientada a Objetos/2016-II/Repositorio de Ejercicios/Unidad I/IS410-II2016-IUnidad/.metadata/.plugins/org.eclipse.php.core/__language__/88c978b9</location>
+		</link>
+	</linkedResources>
+</projectDescription>

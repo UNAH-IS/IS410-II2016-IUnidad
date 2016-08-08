@@ -1,7 +1,0 @@
-package clases;
-
-public class Alumno {
-	private String cuenta;
-
-
-}
