@@ -36,8 +36,8 @@ Abstraccion
 Herencia
 	Funcionalidad que permite crear una clase a partir de otra, de tal forma que esta nueva clase hereda los atributos y metodos de la clase base. Una de las principales ventajas de la herencia es la reutilizacion de codigo.
 	
-	Para aplicar herencia se utiliza extends despues del nombre de la clase hija y luego el nombre de la clase padre.
-	En java no se puede heredar de multiples clases.
+	Para aplicar herencia se utiliza extends(Java y PHP) despues del nombre de la clase hija y luego el nombre de la clase padre.
+	En java,PHP no se puede heredar de multiples clases.
 	
 	
 

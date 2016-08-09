@@ -1,0 +1,35 @@
+package clases;
+
+public class Telefono {
+	private String marca;
+	private String color;
+	private String modelo;
+	private int capacidadMemoriaBytes;
+	private int capacidadDiscoBytes;
+	private int capacidadProcesadorHertz;
+	private int tamanioPantalla;
+	private String Resolucion;
+	private String sistemaOperativo;
+	private String telefonico;
+	private String imei;
+
+	public void setMarca(String marca){
+		//Se utiliza this para diferenciar elementos propios de la clase
+		this.marca = marca;
+	}
+
+	public String getMarca(){
+		return marca;
+	}
+
+	void llamar(){
+		//System.out.println(color);
+		System.out.println("Llamando...");
+	}
+	void colgar(){
+		System.out.println("Colgando...");
+	}
+	void vibrar(){
+		System.out.println("Vibrando...");
+	}
+}

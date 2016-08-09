@@ -8,12 +8,15 @@
 		<meta charset="UTF8">
 	</head>
 	<body>
-		<?php 
-			$a = 2;
-			$a = new Producto(1,"Calcetines");
-			echo "Codigo producto: " . $a->getCodigoProducto()."<br>\n" ;
-			echo "Nombre producto: " . $a->getNombreProducto()."<br>\n";
-			echo "Metodo toString: " . $a->toString()."<br>\n";
+		<?php
+			$a = new Producto("Calcetines");
+			$b = new Producto(855, "Calcetines");
+			//echo "Valor estatico: " . Producto::$valorStatic."<br>";
+			/*echo "Metodo toString: " . $a->toString()."<br>\n";
+			echo "Metodo toString: " . $b->toString()."<br>\n";*/
+			Producto::$valorStatic = "Nuevo valor";
+			$a->imprimirValorEstatico();
+			$b->imprimirValorEstatico();
 		?>
 	</body>
 </html>
