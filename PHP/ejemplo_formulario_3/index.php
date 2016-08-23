@@ -23,17 +23,46 @@
 <html>
 <head>
 	<title>Ejemplo formulario 2</title>
+	<!-- Comentario HTML -->
+
+	<style>
+		/*Comentarios CSS*/
+		/*Selector puede ser el nombre de una etiqueta, un ID o el nombre de una clase CSS*/
+		/*
+		selector {
+			propiedad1:valor1;
+			propiedad2:valor2;
+
+			propiedadN:valorN;
+		}
+		*/
+		h1 {
+			color:#00FF00;
+			font-family:Calibri;
+			background-color:#000000;
+			font-size:60px;
+		}
+
+		#txt-nombre-producto {
+			border-color: #0000FF;
+			font-size:20px;
+		}
+
+		.estilo-cool {
+			padding: 10px;
+		}
+	</style>
 </head>
-<body>
-	<h1 style="color:#00FF00;font-family:Calibri;background-color:#000000;font-size:60px;">Super formulario</h1>
-	<form action= "index.php" method="GET">
+<body style="background-image:url(img/silence-seekers.jpg);background-repeat:no-repeat;color:#ffffff;">
+	<h1>Super formulario</h1>
+	<form action= 'index.php' method="GET">
 		<table>
 			<tr>
 				<td>
 					Codigo Producto: 
 				</td>
 				<td>
-					<input type="text" name = "txt-codigo-producto" id = "txt-codigo-producto" value="<?php echo isset($_GET["txt-codigo-producto"])?$_GET["txt-codigo-producto"]:"";  ?>">
+					<input class="estilo-cool" type="text" name = "txt-codigo-producto" id = "txt-codigo-producto" value="<?php echo isset($_GET["txt-codigo-producto"])?$_GET["txt-codigo-producto"]:"";  ?>">
 				</td>
 			</tr>
 			<tr>
@@ -70,7 +99,7 @@
 					Precio:
 				</td>
 				<td>
-					<input type="text" name="txt-precio" id="txt-precio" value="<?php echo isset($_GET["txt-precio"])?$_GET["txt-precio"]:"";  ?>">
+					<input class="estilo-cool" type="text" name="txt-precio" id="txt-precio" value="<?php echo isset($_GET["txt-precio"])?$_GET["txt-precio"]:"";  ?>">
 				</td>
 			</tr>
 			<tr>
@@ -102,5 +131,6 @@
 			</tr>
 		</table>
 	</form>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

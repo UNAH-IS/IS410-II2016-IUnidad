@@ -44,21 +44,22 @@ Herencia
 
 	interfaces.
 
-Polimorfismo
+Polimorfismo (Poli: Muchos, morfismo: formas)
 	Misma apariencia diferente forma o funcionalidad.
 
 	Sobreescritura de metodos: Es volver a escribir un metodo en la clase hija que previamente estaba definido en la clase padre, con la salvedad de que puede tener un comportamiento completamente diferente.
-	Se suele agregar la etiqueta @Override para indicar que se esta sobreescribiendo un metodo.
+	En Java se suele agregar la etiqueta @Override para indicar que se esta sobreescribiendo un metodo.
 
-	Para identificar si un objeto es una instancia de una clase especifica se utiliza el operador logico instanceof
+	En Java y en PHP para identificar si un objeto es una instancia de una clase especifica se utiliza el operador logico instanceof
 
-	objeto instanceof Clase
+	Java objeto instanceof Clase
+	PHP  $objeto instanceof Clase
 
 	Ejemplos de polimorfismo:
 		Sobreescritura de metodos
 		Sobrecarga de metodos.
 		Compatibilidad de clases.
-		Crear objetos de clases padres utilizando constructores de clases hijas, al final las instancias son del tipo de la clase hija.
+		Java: Crear objetos de clases padres utilizando constructores de clases hijas, al final las instancias son del tipo de la clase hija.
 
 
 Es posible inicializar los atributos internos de una clase haciendo uso de un constructor el cual tiene las siguientes caracteristicas:
@@ -114,3 +115,13 @@ Float -> float
 Long -> long
 Byte -> byte
 Short -> short 
+
+
+
+CSS:
+Se puede definir de 3 formas:
+*En linea: Es decir dentro de la misma etiqueta html a personalizar, se usa la propiedad style.
+*En el encabezado de la pagina: Es decir en la etiqueta <head>, esto se hace mediante la etiqueta <style></style> y dentro de su cuerpo se definen selectores o reglas para aplicar los estilos.
+*En un archivo externo: En este caso los estilos se definen en un archivo externo con la extension .css y se incluyen en el html utilizando la etiqueta link
+	ejemplo:
+		 <link href="css/bootstrap.min.css" rel="stylesheet">
