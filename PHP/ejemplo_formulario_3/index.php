@@ -43,15 +43,9 @@
 			font-size:60px;
 		}
 
-		#txt-nombre-producto {
-			border-color: #0000FF;
-			font-size:20px;
-		}
-
-		.estilo-cool {
-			padding: 10px;
-		}
+		
 	</style>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body style="background-image:url(img/silence-seekers.jpg);background-repeat:no-repeat;color:#ffffff;">
 	<h1>Super formulario</h1>
@@ -62,7 +56,7 @@
 					Codigo Producto: 
 				</td>
 				<td>
-					<input class="estilo-cool" type="text" name = "txt-codigo-producto" id = "txt-codigo-producto" value="<?php echo isset($_GET["txt-codigo-producto"])?$_GET["txt-codigo-producto"]:"";  ?>">
+					<input class="estilo-cool estilo-no-tan-cool" style="color:#00FF00"type="text" name = "txt-codigo-producto" id = "txt-codigo-producto" value="<?php echo isset($_GET["txt-codigo-producto"])?$_GET["txt-codigo-producto"]:"";  ?>">
 				</td>
 			</tr>
 			<tr>

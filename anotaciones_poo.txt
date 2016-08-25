@@ -121,7 +121,7 @@ Short -> short
 CSS:
 Se puede definir de 3 formas:
 *En linea: Es decir dentro de la misma etiqueta html a personalizar, se usa la propiedad style.
-*En el encabezado de la pagina: Es decir en la etiqueta <head>, esto se hace mediante la etiqueta <style></style> y dentro de su cuerpo se definen selectores o reglas para aplicar los estilos.
+*En el encabezado de la pagina: Es decir en la etiqueta <head>, esto se hace mediante la etiqueta <style type="text/css"></style> y dentro de su cuerpo se definen selectores o reglas para aplicar los estilos.
 *En un archivo externo: En este caso los estilos se definen en un archivo externo con la extension .css y se incluyen en el html utilizando la etiqueta link
 	ejemplo:
 		 <link href="css/bootstrap.min.css" rel="stylesheet">

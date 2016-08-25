@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,10 +18,16 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
-
+    <h1>Hola mundo!</h1>
+    <table class="table table-striped table-hover">
+      <tr><th>Encabezado1</th><th>Encabezado2</th></tr>
+      <tr><td>Nombre</td><td><input type="text" class="form-control"></td></tr>
+      <tr><td>Celda</td><td>Celda</td></tr>
+      <tr><td>Celda</td><td>Celda</td></tr>
+      <tr><td colspan="2"><button type="button" class="btn btn-primary">Primary</button></td></tr>
+    </table>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>

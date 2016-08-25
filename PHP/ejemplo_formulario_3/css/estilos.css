@@ -1,0 +1,13 @@
+#txt-nombre-producto {
+	border-color: #00FF00;
+	font-size:20px;
+}
+
+.estilo-cool {
+	padding: 10px;
+	color:#FF0000;
+}
+
+.estilo-no-tan-cool{
+	background-color:#000000;
+}
