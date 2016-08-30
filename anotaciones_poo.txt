@@ -39,10 +39,20 @@ Herencia
 	Para aplicar herencia se utiliza extends(Java y PHP) despues del nombre de la clase hija y luego el nombre de la clase padre.
 	En java,PHP no se puede heredar de multiples clases.
 	
-	
+	Clases abstractas:
+	Es una clase que se utiliza como molde o estructara base para ser utilizada en herencia
+
+	abstract: Resumen
+	Caracteristicas:
+	*Se utiliza la palabra reservada abstract para definir una clase como abstracta.
+	*No se puede instanciar, sin embargo pueden tener un constructor.
+	*Si se define un metodo abstracto la clase debe ser abstracta.
+	*Puede definirse una clase abstracta que no tenga ningun metodo abstracto.
+	*Se pueden definir metodos como abstract, estos metodos no tienen cuerpo, solo se declaran.
+	*Todo metodo abstracto se debe implementar obligatoriamente en las clases hijas.
 
 
-	interfaces.
+	Interfaces.
 
 Polimorfismo (Poli: Muchos, morfismo: formas)
 	Misma apariencia diferente forma o funcionalidad.
