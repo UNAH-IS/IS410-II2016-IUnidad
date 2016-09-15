@@ -136,9 +136,16 @@
 	
 
 
-	function listaPersonas($arreglo){
-		for($i=0;$i<count($arreglo);$i++)
-			echo '<option value= "'.$arreglo[$i]->getNombre().'">'.$arreglo[$i]->getNombre().'</option>';
+	function listaPersonas($arreglo,$nombreItem){//Se envia el nombre del item para poder evaluarlo
+		for($i=0;$i<count($arreglo);$i++){
+			echo '<option value= "'.$arreglo[$i]->getNombre().'"'; //imprime <option value="valor"
+			if (isset($_GET[$nombreItem]))
+				if ($_GET[$nombreItem]==$arreglo[$i]->getNombre()) /*Verificar si el valor que viene en el arreglo GET es el mismo item $i del arreglo, en caso de ser asi, seleccionarlo*/
+					echo ' selected="selected" ';
+			echo '>'.$arreglo[$i]->getNombre().'</option>'; //imprime >Nombre</option>
+			
+
+		}
 	}
 ?>
 
@@ -215,7 +222,7 @@
 							/*for($i=0;$i<count($clientes);$i++)
 								echo '<option value= "'.$clientes[$i]->getNombre().'">'.$clientes[$i]->getNombre().'</option>';*/
 
-							listaPersonas($clientes);
+							listaPersonas($clientes,"slc-cliente");
 						?>	
 					</select>
 				</td>
@@ -224,7 +231,7 @@
 				<td>Mecanico: </td>
 				<td>
 					<select name="slc-mecanico" id ="slc-mecanico" class="form-control">
-					<?php listaPersonas($mecanicos); ?>
+					<?php listaPersonas($mecanicos,"slc-mecanico"); ?>
 					</select>
 				</td>
 			</tr>
@@ -232,7 +239,7 @@
 				<td>Cajero: </td>
 				<td>
 					<select name="slc-cajero" id ="slc-cajero" class="form-control">
-						<?php listaPersonas($cajeros); ?>
+						<?php listaPersonas($cajeros,"slc-cajero"); ?>
 					</select>
 				</td>
 			</tr>
@@ -241,11 +248,15 @@
 				<td>
 					<select name="slc-modelo" id ="slc-modelo" class="form-control">
 					<?php
-						for($i=0;$i<count($modelos);$i++)
-							echo '<option value= "'.$modelos[$i]->getNombreModelo().'">'.
-									$modelos[$i]->getNombreModelo().", ".
-									$modelos[$i]->getMarca()->getNombreMarca().
-									'</option>';
+						for($i=0;$i<count($modelos);$i++){
+							echo '<option value= "'.$modelos[$i]->getNombreModelo().'"';
+							if (isset($_GET["slc-modelo"]))
+								if ($_GET["slc-modelo"]==$modelos[$i]->getNombreModelo())
+									echo ' selected="selected" ';
+							
+							echo '>'.$modelos[$i]->getNombreModelo().", ".
+									$modelos[$i]->getMarca()->getNombreMarca().'</option>';
+						}
 					?>
 					</select>
 				</td>
@@ -253,23 +264,38 @@
 			<tr>
 				<td>Placa: </td>
 				<td>
-					<input type="text" name="txt-placa" id="txt-placa" class="form-control">
+					<input type="text" name="txt-placa" id="txt-placa" class="form-control" 
+						<?php if(isset($_GET["txt-placa"])) echo 'value="'.$_GET["txt-placa"].'"';?>
+					>
 				</td>
 			</tr>
 			<tr>
 				<td>Kilometraje</td>
-				<td><input type="text" name="txt-kilometraje" id="txt-kilometraje" class="form-control"></td>
+				<td>
+					<input type="text" name="txt-kilometraje" id="txt-kilometraje" class="form-control"
+						<?php if(isset($_GET["txt-kilometraje"])) echo 'value="'.$_GET["txt-kilometraje"].'"';?>
+					>
+				</td>
 			</tr>
 			<tr>
 				<td>Fecha Ingreso:</td>
-				<td><input type="text" name="txt-fecha-ingreso" id="txt-fecha-ingreso" class="form-control"></td>
+				<td>
+					<input type="text" name="txt-fecha-ingreso" id="txt-fecha-ingreso" class="form-control"
+						<?php if(isset($_GET["txt-fecha-ingreso"])) echo 'value="'.$_GET["txt-fecha-ingreso"].'"';?>
+					>
+				</td>
 			</tr>
 			<tr>
 				<td>Repuestos:</td>
 				<td>
 					<?php
-						for($i=0;$i<count($repuestos);$i++)
-							echo '<label><input type="checkbox" name="repuestos[]" id="repuestos[]" >'.$repuestos[$i]->getNombreRepuesto().'</label><br>';
+						for($i=0;$i<count($repuestos);$i++){
+							echo '<label><input type="checkbox" name="repuestos[]" id="repuestos[]" value="'.$repuestos[$i]->getCodigoRepuesto().'"';
+							if (isset($_GET["repuestos"])) 
+								if (in_array($repuestos[$i]->getCodigoRepuesto(),$_GET["repuestos"]))
+									echo ' checked="checked" ';
+							echo '>'.$repuestos[$i]->getNombreRepuesto().'</label><br>';
+						}
 					?>
 				</td>
 			</tr>
